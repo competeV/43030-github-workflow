@@ -1,0 +1,15 @@
+name: Update Site Log
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show who pushed
+        run: echo "Pushed by ${{ github.actor }}"
